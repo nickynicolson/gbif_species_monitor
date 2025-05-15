@@ -23,8 +23,6 @@ jobs:
           packages: |
             any::rgbif 
             any::devtools
-          extra-packages: any::rcmdcheck
-            needs: check
 
       - name: Install rCat
         run: |
