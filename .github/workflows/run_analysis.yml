@@ -13,12 +13,22 @@ jobs:
     strategy:
       fail-fast: false
 
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: |
             any::rgbif 
+            any::devtools
+          extra-packages: any::rcmdcheck
+            needs: check
+
+      - name: Install rCat
+        run: |
+          Rscript -e "devtools::install_github("gistin/rCAT2")"
 
       - name: Check out repository
         uses: actions/checkout@v3
