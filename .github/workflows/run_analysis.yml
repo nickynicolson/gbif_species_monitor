@@ -22,6 +22,7 @@ jobs:
         with:
           packages: |
             any::rgbif 
+            any::sf
 
       - name: Check out repository
         uses: actions/checkout@v3
