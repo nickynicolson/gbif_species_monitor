@@ -26,6 +26,7 @@ jobs:
             any::janitor
             any::tidyr      
             any::units
+            any::sf
 
       - name: install cmake and abseil
         run: apt-get install -y cmake libabsl-dev
