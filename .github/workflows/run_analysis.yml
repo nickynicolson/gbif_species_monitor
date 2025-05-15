@@ -26,6 +26,9 @@ jobs:
             any::janitor
             any::tidyr            
 
+      - name: Install s2
+        run: Rscript -e 'remotes::install_github("r-spatial/s2")'
+
       - name: Install rCat
         run: Rscript -e 'devtools::install_github("gistin/rCAT2")'
 
