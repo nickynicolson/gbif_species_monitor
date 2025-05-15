@@ -24,12 +24,11 @@ jobs:
             any::rgbif 
             any::devtools
             any::janitor
-            any::tidyr 
-            any::rCAT           
+            any::tidyr            
 
-      # - name: Install rCat
-      #   run: |
-      #     Rscript -e "pak::pkg_install('gistin/rCAT2')"
+      - name: Install rCat
+        run: |
+          run: Rscript -e 'devtools::install_github("gistin/rCAT2")'
 
       - name: Check out repository
         uses: actions/checkout@v3
