@@ -6,7 +6,7 @@ on:
 
 jobs:
   import-data:
-    runs-on: ubuntu-latest
+    runs-on: rocker/rstudio
     steps:
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
