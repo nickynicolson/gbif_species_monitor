@@ -27,6 +27,7 @@ jobs:
             any::tidyr      
             any::units
             any::sf
+            ant::ggplot2
 
       - name: install cmake and abseil
         run: apt-get install -y cmake libabsl-dev
