@@ -27,8 +27,7 @@ jobs:
             any::tidyr            
 
       - name: Install rCat
-        run: |
-          run: Rscript -e 'devtools::install_github("gistin/rCAT2")'
+        run: Rscript -e 'devtools::install_github("gistin/rCAT2")'
 
       - name: Check out repository
         uses: actions/checkout@v3
