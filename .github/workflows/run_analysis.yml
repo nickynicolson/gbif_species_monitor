@@ -6,7 +6,7 @@ on:
 
 jobs:
   import-data:
-    runs-on: rocker/tidyverse
+    runs-on: ubuntu-latest
     steps:
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
