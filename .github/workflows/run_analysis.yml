@@ -22,27 +22,12 @@ jobs:
         with:
           packages: |
             any::rgbif 
-            any::devtools
-            any::janitor
-            any::tidyr      
-            any::units
-            any::sf
-            any::ggplot2
-
-      - name: install cmake and abseil
-        run: apt-get install -y cmake libabsl-dev
-
-      - name: Install s2
-        run: Rscript -e 'remotes::install_github("r-spatial/s2")'
-
-      - name: Install rCat
-        run: Rscript -e 'devtools::install_github("gistin/rCAT2")'
 
       - name: Check out repository
         uses: actions/checkout@v3
 
       - name: Import data
-        run: Rscript -e 'source("redlist_analysis.R")'
+        run: Rscript -e 'source("redlist_analysis_basic.R")'
 
       - name: List what we built
         run: |
