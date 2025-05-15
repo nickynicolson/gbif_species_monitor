@@ -26,8 +26,8 @@ jobs:
             any::janitor
             any::tidyr      
 
-      - name: install abseil
-        run: apt-get install -y libabsl-dev
+      - name: install cmake and abseil
+        run: apt-get install -y cmake libabsl-dev
 
       - name: Install s2
         run: Rscript -e 'remotes::install_github("r-spatial/s2")'
